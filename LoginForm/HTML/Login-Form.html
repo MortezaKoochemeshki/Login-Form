@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../CSS/Login-Form.css">
+    <link rel="stylesheet" href="../CSS/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../CSS/css/all.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Login Form </title>
+</head>
+<body>
+    
+    <section id="login">
+        <h1 class="title"> ورود به حساب کاربری </h1>
+        <form action="#">
+            <div class="username-container">
+                <label for="user-name" class="label">نام کاربری</label>
+                <input id="user-name" type="text" placeholder="مرتضی کوچه مشکی" id="user-name" class="input" required autocomplete="off">
+            </div>
+            <div class="password-container">
+                <label for="user-pass" class="label"> رمز عبور </label> 
+                <input type="password" name="" id="user-pass" class="input pass-input" required placeholder="حداقل هشت کاراکتر" minlength="8">
+                <img src="../Pictures/visible-eye.png" class="pass-visibility" alt="visible-eye">
+            </div>
+            <input type="submit" value="ورود به حساب کاربری" class="submit-btn">
+        </form>
+    </section>
+
+    <script src="../JavaScript/Login-Form.js"></script>
+</body>
+</html>

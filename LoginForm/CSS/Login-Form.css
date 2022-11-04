@@ -1,0 +1,155 @@
+/* General Style */
+@font-face {
+    font-family: vazir;
+    src: url(../Fonts/vazir.ttf);
+}
+
+:root{
+    --persian-font: vazir;
+    --bg-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
+    --border-radius: 5px;
+    --input-padding: 10px;
+    --transition: 0.2s ease-in-out;
+    --btn-background: #0396FF;
+    --btn-background-hover: #0368ff;
+    --input-background: #e2e2e2;
+    --input-background-focused: #dddddd;
+}
+
+body{
+    background-image: var(--bg-image);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: var(--persian-font);
+    direction: rtl;
+}
+*{
+    font-family: var(--persian-font);
+    transition: var(--transition);
+}
+
+/* Login Section */
+#login{
+    background: #32927E;
+    background: -webkit-linear-gradient(top left, #32927E, #A7D5A6);
+    background: -moz-linear-gradient(top left, #32927E, #A7D5A6);
+    background: linear-gradient(to bottom right, #32927E, #A7D5A6);
+    width: 500px;
+    border-radius: var(--border-radius);
+    padding: 30px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+#login .title{
+    color: #002bad;
+}
+
+#login .label{
+    display: block;
+}
+
+#login .input{
+    margin-bottom: 10px;
+    width: 100%;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: var(--input-padding);
+    background-color: var(--input-background);
+    box-sizing: border-box;
+}
+
+#login .input:focus{
+    outline: none;
+    background-color: var(--input-background-focused);
+}
+
+#login .password-container{
+    position: relative;
+}
+
+#login .pass-visibility{
+    width: 21px;
+    opacity: 0.6;
+    position: absolute;
+    top: 36px;
+    left: 10px;
+    display: none;
+}
+
+#login .pass-visibility:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+#login .submit-btn{
+    width: 100%;
+    border-radius: var(--border-radius);
+    border: none;
+    background-color: var(--btn-background);
+    color: whitesmoke;
+    font-size: 15px;
+    padding: var(--input-padding);
+    margin-top: 20px;
+}
+
+#login .submit-btn:hover{
+    background-color: var(--btn-background-hover);
+    cursor: pointer;
+}
+
+label{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 757px) {
+    #login{
+        width: 450px;
+    }
+
+    #login .title{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 456px) {
+    #login{
+        width: 300px;
+    }
+
+    #login .title{
+        font-size: 20px;
+    }
+
+    #login #user-pass{
+        width: 100%;
+    }
+
+    #login .pass-visibility{
+        top: 36px;
+        left: 15px;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    #login{
+        width: 100px;
+    }
+
+    #login .title{
+        font-size: 20px;
+    }
+
+    #login #user-pass{
+        width: 85%;
+    }
+
+    #login .pass-visibility{
+        background-color: var(--input-background);
+        border-radius: var(--border-radius);
+        top: 26px;
+        left: -5px;
+    }
+}
